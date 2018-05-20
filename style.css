@@ -1,0 +1,47 @@
+body {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 15px;
+}
+
+.wrapper {
+  position: fixed;
+  top: 40%;
+  left: 23%;
+  font-size: 4rem;
+}
+
+.letterFade {
+  animation: fadeOut 2s ease;
+}
+
+.letter1Change::after {
+  animation: changeLetter 2s linear infinite alternate;
+}
+
+@keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0;
+      display: none;
+    }
+}
+
+@keyframes changeLetter {
+  0% {
+  }
+  50% {
+    color: #fff;
+  }
+  100% {
+    content: "U";
+  }
+}
+
+@keyframes  {
+
+}
