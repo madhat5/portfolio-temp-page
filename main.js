@@ -1,13 +1,13 @@
 console.log('sim sim salabim')
 
 
-// change div display
-var inlineBlock = function() {
-  $('.letter').css('display', 'inline-block');
-  console.log('display inline block');
-};
-inlineBlock();
-
+// // change div display
+// var inlineBlock = function() {
+//   $('.letter').css('display', 'inline-block');
+//   console.log('display inline block');
+// };
+// inlineBlock();
+//
 // // display block
 // var block = function() {
 //   $('.letter').css('display', 'block');
@@ -31,14 +31,27 @@ inlineBlock();
 
 
 
-// Create add/remove classes functions
-// classes have animations associated with themd
-var addFade = function() {
-  $('.letter2', '.letter3', '.letter4', '.letter5').addClass('letterFade');
+// // Create add/remove classes functions
+// // classes have animations associated with themd
+// var addFade = function() {
+//   $('.letter2', '.letter3', '.letter4', '.letter5').addClass('letterFade');
+// };
+// addFade();
+//
+// var timeoutDelay = function () {
+//   setTimeout( addFade, 3000);
+//   console.log('fading');
+// };
+// timeoutDelay();
+
+
+// event listeners
+var removeDiv = function() {
+  $('div').remove('#letter2, #letter3, #letter4, #letter5, #letter5');
 };
 
 var timeoutDelay = function () {
-  setTimeout( addFade, 3000);
-  console.log('fading');
+  setTimeout( removeDiv, 3000);
+  console.log('remove div');
 };
-timeoutDelay();
+// timeoutDelay();

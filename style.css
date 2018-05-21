@@ -1,23 +1,67 @@
+/* GLOBAL */
 body {
   font-family: 'Roboto Mono', monospace;
   font-size: 15px;
 }
 
+.letter {
+  display: inline-block;
+}
+
 .wrapper {
-  position: fixed;
+  position: absolute;
   top: 40%;
-  left: 23%;
-  font-size: 4rem;
+  left: 20%;
+  font-size: 1.5rem;
 }
 
-.letterFade {
-  animation: fadeOut 2s ease;
+/* MEDIA QUERIES */
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+  .wrapper {
+    font-size: 2.5rem;
+  }
 }
 
-.letter1Change::after {
-  animation: changeLetter 2s linear infinite alternate;
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  .wrapper {
+    font-size: 3rem;
+  }
 }
 
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+  .wrapper {
+    font-size: 4rem;
+  }
+}
+
+/* ANIMATIONS */
+/* .letterFade {
+  animation: fadeOut 1.5s ease-out;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.letterMove {
+  animation: pullWordsLeft 1.5s ease-out, pullWordsRight 1.5s ease-out;
+  animation-delay: 1.55s;
+  animation-fill-mode: forwards;
+} */
+
+/* .letter1Change::after {
+  animation: changeLetter 1.5s linear infinite alternate;
+  animation-delay: 1.6s;
+} */
+
+/* .letter {
+  animation: displayBlock 1.5s ease-in;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+} */
+
+/* KEY FRAMES */
 @keyframes fadeOut {
     0% {
       opacity: 1;
@@ -31,8 +75,27 @@ body {
     }
 }
 
-@keyframes changeLetter {
+@keyframes pullWordsRight {
   0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100px);
+  }
+}
+
+@keyframes pullWordsLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}
+
+/* @keyframes changeLetter {
+  0% {
+    content: "O";
   }
   50% {
     color: #fff;
@@ -40,8 +103,13 @@ body {
   100% {
     content: "U";
   }
-}
+} */
 
-@keyframes  {
-
-}
+/* @keyframes displayBlock {
+  0% {
+    display: inline-block;
+  }
+  100% {
+    display: block;
+  }
+} */
